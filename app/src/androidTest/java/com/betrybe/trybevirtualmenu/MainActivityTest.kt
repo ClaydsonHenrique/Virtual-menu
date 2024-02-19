@@ -1,4 +1,4 @@
-package com.example.trybevirtualmenu
+package com.betrybe.trybevirtualmenu
 
 import android.content.Context
 import android.widget.ImageView
@@ -21,8 +21,8 @@ import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.example.trybevirtualmenu.views.MainActivity
-import com.example.trybevirtualmenu.views.MenuItemDetailActivity
+import com.betrybe.trybevirtualmenu.views.MainActivity
+import com.betrybe.trybevirtualmenu.views.MenuItemDetailActivity
 import org.hamcrest.Matchers.allOf
 import org.junit.After
 import org.junit.Before

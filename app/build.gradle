@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.trybevirtualmenu'
+    namespace 'com.betrybe.trybevirtualmenu'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.trybevirtualmenu"
+        applicationId "com.betrybe.trybevirtualmenu"
         minSdk 24
         targetSdk 33
         versionCode 1

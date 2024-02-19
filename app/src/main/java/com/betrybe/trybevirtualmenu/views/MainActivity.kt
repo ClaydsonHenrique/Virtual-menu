@@ -1,8 +1,8 @@
-package com.example.trybevirtualmenu.views
+package com.betrybe.trybevirtualmenu.views
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.trybevirtualmenu.R
+import com.betrybe.trybevirtualmenu.R
 
 class MainActivity : AppCompatActivity() {
 
