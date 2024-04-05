@@ -29,8 +29,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="20dp"
             android:layout_marginBottom="30dp"
-            android:src="@drawable/logo"
-            />
+            android:src="@drawable/logo" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/main_title"
