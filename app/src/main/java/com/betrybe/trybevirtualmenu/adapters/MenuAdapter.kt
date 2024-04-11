@@ -11,34 +11,34 @@ import com.betrybe.trybevirtualmenu.interfaces.MenuInterface
 import com.betrybe.trybevirtualmenu.models.MenuData
 import com.google.android.material.imageview.ShapeableImageView
 
-class MenuAdapter (val Menu: List<MenuData>): Adapter<MenuAdapter.MenuViewHolder>() {
+class MenuAdapter (val menu: List<MenuData>): Adapter<MenuAdapter.MenuViewHolder>() {
 
-    private var MenuList: MenuInterface? = null
+    private var menuList: MenuInterface? = null
 
     fun setMenuListener(list:MenuInterface){
-        this.MenuList = list
+        this.menuList = list
     }
 
-    class MenuViewHolder (view: View, MenuList: MenuInterface?) : RecyclerView.ViewHolder(view){
-        val ImageDish = view.findViewById<ShapeableImageView>(R.id.item_menu_image)
+    class MenuViewHolder (view: View, menuList: MenuInterface?) : RecyclerView.ViewHolder(view){
+        val imageDish = view.findViewById<ShapeableImageView>(R.id.item_menu_image)
         val nameDish = view.findViewById<TextView>(R.id.item_menu_name)
 
         init {
             view.setOnClickListener{
-                MenuList?.onMenuClick(view, absoluteAdapterPosition)
+                menuList?.onMenuClick(view, absoluteAdapterPosition)
             }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_menu_layout, parent, false)
-        return MenuViewHolder(view, MenuList)
+        return MenuViewHolder(view, menuList)
     }
 
-    override fun getItemCount(): Int = Menu.size
+    override fun getItemCount(): Int = menu.size
 
     override fun onBindViewHolder(holder: MenuViewHolder, position: Int) {
-        holder.nameDish.text = Menu[position].name
-        holder.ImageDish.setImageResource(Menu[position].image)
+        holder.nameDish.text = menu[position].name
+        holder.imageDish.setImageResource(menu[position].image)
     }
 }

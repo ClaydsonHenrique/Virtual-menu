@@ -28,7 +28,7 @@ class MenuItemDetailActivity : AppCompatActivity() {
         image.setImageResource(getMenuId.image)
         description.text = getMenuId.description
         price.text = getMenuId.price.toString()
-//
+
         back.setOnClickListener{
             finish()
         }
