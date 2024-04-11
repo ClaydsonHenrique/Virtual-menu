@@ -32,5 +32,6 @@ class MenuItemDetailActivity : AppCompatActivity() {
         back.setOnClickListener{
             finish()
         }
+        // test 
     }
 }
