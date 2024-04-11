@@ -10,11 +10,11 @@ import com.google.android.material.textview.MaterialTextView
 
 class MenuItemDetailActivity : AppCompatActivity() {
 
-    private val image: ShapeableImageView by lazy { findViewById(R.id.detail_image) }
-    private val name: MaterialTextView by lazy { findViewById(R.id.detail_name) }
-    private val description: MaterialTextView by lazy { findViewById(R.id.detail_description) }
-    private val price: MaterialTextView by lazy { findViewById(R.id.detail_price) }
-    private val back: MaterialButton by lazy { findViewById(R.id.detail_back) }
+//    private val image: ShapeableImageView by lazy { findViewById(R.id.detail_image) }
+//    private val name: MaterialTextView by lazy { findViewById(R.id.detail_name) }
+//    private val description: MaterialTextView by lazy { findViewById(R.id.detail_description) }
+//    private val price: MaterialTextView by lazy { findViewById(R.id.detail_price) }
+//    private val back: MaterialButton by lazy { findViewById(R.id.detail_back) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,15 +24,15 @@ class MenuItemDetailActivity : AppCompatActivity() {
 
         val getMenuId = MenuDatabase.getMenubyId(menuId + 1)!!
 
-        name.text = getMenuId.name
-        image.setImageResource(getMenuId.image)
-        description.text = getMenuId.description
-
-        val formattedPrice = "R$: ${getMenuId.price}"
-        price.text = formattedPrice
-
-        back.setOnClickListener{
-            finish()
-        }
+//        name.text = getMenuId.name
+//        image.setImageResource(getMenuId.image)
+//        description.text = getMenuId.description
+//
+//        val formattedPrice = "R$: ${getMenuId.price}"
+//        price.text = formattedPrice
+//
+//        back.setOnClickListener{
+//            finish()
+//        }
     }
 }
