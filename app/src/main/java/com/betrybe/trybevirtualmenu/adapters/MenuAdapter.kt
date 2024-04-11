@@ -11,7 +11,7 @@ import com.betrybe.trybevirtualmenu.interfaces.MenuInterface
 import com.betrybe.trybevirtualmenu.models.MenuData
 import com.google.android.material.imageview.ShapeableImageView
 
-class MenuAdapter (val menu: List<MenuData>): Adapter<MenuAdapter.MenuViewHolder>() {
+class MenuAdapter (private val menu: List<MenuData>): Adapter<MenuAdapter.MenuViewHolder>() {
 
     private var menuList: MenuInterface? = null
 
@@ -20,8 +20,8 @@ class MenuAdapter (val menu: List<MenuData>): Adapter<MenuAdapter.MenuViewHolder
     }
 
     class MenuViewHolder (view: View, menuList: MenuInterface?) : RecyclerView.ViewHolder(view){
-        val imageDish = view.findViewById<ShapeableImageView>(R.id.item_menu_image)
-        val nameDish = view.findViewById<TextView>(R.id.item_menu_name)
+        val imageDish: ShapeableImageView = view.findViewById(R.id.item_menu_image)
+        val nameDish: TextView = view.findViewById(R.id.item_menu_name)
 
         init {
             view.setOnClickListener{
