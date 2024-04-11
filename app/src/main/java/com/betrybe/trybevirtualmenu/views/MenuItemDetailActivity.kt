@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.betrybe.trybevirtualmenu.R
 import com.betrybe.trybevirtualmenu.interfaces.MenuInterface
 import com.betrybe.trybevirtualmenu.models.MenuDatabase
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.textview.MaterialTextView
 
@@ -17,6 +18,7 @@ class MenuItemDetailActivity : AppCompatActivity() {
     private val name: MaterialTextView by lazy { findViewById(R.id.detail_name) }
     private val description: MaterialTextView by lazy { findViewById(R.id.detail_description) }
     private val price: MaterialTextView by lazy { findViewById(R.id.detail_price) }
+    private val back: MaterialButton by lazy { findViewById(R.id.detail_back) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,5 +32,9 @@ class MenuItemDetailActivity : AppCompatActivity() {
         image.setImageResource(getMenuId.image)
         description.text = getMenuId.description
         price.text = getMenuId.price
+
+        back.setOnClickListener{
+            finish()
+        }
     }
 }
