@@ -14,7 +14,7 @@ class MenuItemDetailActivity : AppCompatActivity() {
 //    private val name: MaterialTextView by lazy { findViewById(R.id.detail_name) }
 //    private val description: MaterialTextView by lazy { findViewById(R.id.detail_description) }
 //    private val price: MaterialTextView by lazy { findViewById(R.id.detail_price) }
-//    private val back: MaterialButton by lazy { findViewById(R.id.detail_back) }
+    private val back: MaterialButton by lazy { findViewById(R.id.detail_back) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,8 +31,8 @@ class MenuItemDetailActivity : AppCompatActivity() {
 //        val formattedPrice = "R$: ${getMenuId.price}"
 //        price.text = formattedPrice
 //
-//        back.setOnClickListener{
-//            finish()
-//        }
+        back.setOnClickListener{
+            finish()
+        }
     }
 }
