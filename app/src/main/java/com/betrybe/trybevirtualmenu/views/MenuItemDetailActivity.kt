@@ -31,7 +31,9 @@ class MenuItemDetailActivity : AppCompatActivity() {
         name.text = getMenuId.name
         image.setImageResource(getMenuId.image)
         description.text = getMenuId.description
-        price.text = getMenuId.price
+
+        val formattedPrice = "R$: ${getMenuId.price}"
+        price.text = formattedPrice
 
         back.setOnClickListener{
             finish()
