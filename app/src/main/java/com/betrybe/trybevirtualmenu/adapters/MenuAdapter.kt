@@ -13,8 +13,8 @@ import com.google.android.material.imageview.ShapeableImageView
 
 class MenuAdapter (val Menu: List<MenuData>): Adapter<MenuAdapter.MenuViewHolder>() {
     class MenuViewHolder (view: View) : RecyclerView.ViewHolder(view){
-        val ImageDish = view.findViewById<ShapeableImageView>()
-        val nameDish = view.findViewById<TextView>()
+        val ImageDish = view.findViewById<ShapeableImageView>(R.id.item_menu_image)
+        val nameDish = view.findViewById<TextView>(R.id.item_menu_name)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuViewHolder {
