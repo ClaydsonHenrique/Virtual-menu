@@ -11,7 +11,8 @@ import com.betrybe.trybevirtualmenu.interfaces.MenuInterface
 import com.betrybe.trybevirtualmenu.models.MenuData
 import com.google.android.material.imageview.ShapeableImageView
 
-class MenuAdapter (private val menu: List<MenuData>): Adapter<MenuAdapter.MenuViewHolder>() {
+class MenuAdapter (private val menu: List<MenuData>):
+    Adapter<MenuAdapter.MenuViewHolder>() {
 
     private var menuList: MenuInterface? = null
 
