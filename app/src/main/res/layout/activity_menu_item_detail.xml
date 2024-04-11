@@ -89,6 +89,7 @@
                 android:textAlignment="textStart"
                 android:textColor="@color/Tertiary"
                 android:textSize="18sp"
+                android:text=""
                  />
         </LinearLayout>
     </ScrollView>
