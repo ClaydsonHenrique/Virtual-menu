@@ -25,7 +25,7 @@ class MenuAdapter (val Menu: List<MenuData>): Adapter<MenuAdapter.MenuViewHolder
 
         init {
             view.setOnClickListener{
-                MenuList?.onMenuClick(view, adapterPosition)
+                MenuList?.onMenuClick(view, absoluteAdapterPosition)
             }
         }
     }
