@@ -10,26 +10,24 @@ import com.betrybe.trybevirtualmenu.models.MenuDatabase
 
 class MenuItemDetailActivity : AppCompatActivity() {
 
-    private val back: Button by lazy { findViewById(R.id.detail_back) }
     private val image: ImageView by lazy { findViewById(R.id.detail_image) }
     private val name: TextView by lazy { findViewById(R.id.detail_name) }
     private val description: TextView by lazy { findViewById(R.id.detail_description) }
     private val price: TextView by lazy { findViewById(R.id.detail_price) }
+
+    private val back: Button by lazy { findViewById(R.id.detail_back) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_item_detail)
 
         val menuId = intent.getIntExtra("menu_id", 0)
-
-        val getMenuId = MenuDatabase.getMenubyId(menuId + 1)!!
+        val getMenuId = MenuDatabase.getMenuById(menuId + 1)!!
 
         name.text = getMenuId.name
         image.setImageResource(getMenuId.image)
         description.text = getMenuId.description
-
-        val formattedPrice = "R$: ${getMenuId.price}"
-        price.text = formattedPrice
+        price.text = getMenuId.price.toString()
 //
         back.setOnClickListener{
             finish()
