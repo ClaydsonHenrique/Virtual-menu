@@ -20,9 +20,8 @@ class MainActivity : AppCompatActivity(),MenuInterface {
 
         val menu = MenuDatabase.getMenu()
 
-        val menuAdapter = MenuAdapter(menu)
+        val menuAdapter = MenuAdapter(menu, this)
         menuAdapter.setMenuListener(this)
-
         MenuList.layoutManager = LinearLayoutManager(this)
         MenuList.adapter = menuAdapter
     }
