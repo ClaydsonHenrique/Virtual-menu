@@ -1,6 +1,9 @@
 package com.betrybe.trybevirtualmenu.views
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.betrybe.trybevirtualmenu.R
 import com.betrybe.trybevirtualmenu.models.MenuDatabase
@@ -10,11 +13,11 @@ import com.google.android.material.textview.MaterialTextView
 
 class MenuItemDetailActivity : AppCompatActivity() {
 
-    private val image: ShapeableImageView by lazy { findViewById(R.id.detail_image) }
-    private val name: MaterialTextView by lazy { findViewById(R.id.detail_name) }
-    private val description: MaterialTextView by lazy { findViewById(R.id.detail_description) }
-    private val price: MaterialTextView by lazy { findViewById(R.id.detail_price) }
-    private val back: MaterialButton by lazy { findViewById(R.id.detail_back) }
+    private val image: ImageView by lazy { findViewById(R.id.detail_image) }
+    private val name: TextView by lazy { findViewById(R.id.detail_name) }
+    private val description: TextView by lazy { findViewById(R.id.detail_description) }
+    private val price: TextView by lazy { findViewById(R.id.detail_price) }
+    private val back: Button by lazy { findViewById(R.id.detail_back) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
