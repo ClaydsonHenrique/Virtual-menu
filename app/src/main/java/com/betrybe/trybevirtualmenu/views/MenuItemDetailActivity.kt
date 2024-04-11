@@ -1,12 +1,8 @@
 package com.betrybe.trybevirtualmenu.views
 
 import android.os.Bundle
-import android.view.View
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.betrybe.trybevirtualmenu.R
-import com.betrybe.trybevirtualmenu.interfaces.MenuInterface
 import com.betrybe.trybevirtualmenu.models.MenuDatabase
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.imageview.ShapeableImageView
@@ -31,9 +27,9 @@ class MenuItemDetailActivity : AppCompatActivity() {
         name.text = getMenuId.name
         image.setImageResource(getMenuId.image)
         description.text = getMenuId.description
-//
-//        val formattedPrice = "R$: ${getMenuId.price}"
-//        price.text = formattedPrice
+
+        val formattedPrice = "R$: ${getMenuId.price}"
+        price.text = formattedPrice
 
         back.setOnClickListener{
             finish()
