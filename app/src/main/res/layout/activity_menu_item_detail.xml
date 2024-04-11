@@ -50,7 +50,7 @@
                 android:textColor="@color/white"
                 android:textSize="22sp"
                 android:textAlignment="center"
-                android:text="Detalhe do Prato"
+                android:text="@string/detail_text"
                 />
 
             <com.google.android.material.imageview.ShapeableImageView
